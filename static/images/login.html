@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #f5b98a, #fddcc1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      display: flex;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      background: rgba(255, 255, 255, 0.1);  /* TRANSPARENT */
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(12px);  /* GLASS EFFECT */
+    }
+
+    .logo-container {
+      width: 50%;
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .login-container {
+      width: 50%;
+      padding: 40px;
+      text-align: center;
+      color: #333;
+    }
+
+    .input-group {
+      padding: 15px 0;
+    }
+
+    input {
+      width: 80%;
+      height: 50px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 2px solid rgba(0, 0, 0, 0.4);
+      background: rgba(255, 255, 255, 0.4);  /* input transparency */
+      backdrop-filter: blur(8px);
+    }
+
+    .bttn-login {
+      height: 50px;
+      width: 150px;
+      margin-top: 15px;
+      border-radius: 10px;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.5);
+      border: 2px solid rgba(0, 0, 0, 0.4);
+      transition: 0.3s;
+      backdrop-filter: blur(6px);
+    }
+
+    .bttn-login:hover {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      color: #a83f11;
+    }
+
+    a {
+      color: brown;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .logo-container,
+      .login-container {
+        width: 100%;
+      }
+
+      .logo-container img {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="logo-container">
+      <img src="shop.jpg" alt="Logo">
+    </div>
+
+    <div class="login-container">
+      <h1>LOGIN</h1>
+      <p>Welcome back!!!</p>
+
+      <form action="homepage.html">
+        <div class="input-group">
+          <input type="text" placeholder="Username" required>
+        </div>
+
+        <div class="input-group">
+          <input type="password" placeholder="Password" required>
+        </div>
+
+        <button class="bttn-login">LOGIN</button>
+      </form>
+
+      <p>Don't have an account? <a href="">Sign Up</a></p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

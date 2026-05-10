@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout | KartMitra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #7d2181;
+        }
+        .checkout-form {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .shipping-form {
+            flex: 1;
+        }
+        .order-summary {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        button {
+            background: #7d2181;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #5a165e;
+        }
+        .item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .total {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 2px solid #7d2181;
+        }
+        .message {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+        }
+        .error {
+            background: #ffebee;
+            color: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🛒 Checkout</h1>
+        
+        {% if messages %}
+            {% for message in messages %}
+                <div class="message {% if message.tags %}{{ message.tags }}{% endif %}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        
+        <div class="checkout-form">
+            <div class="shipping-form">
+                <h3>Shipping Details</h3>
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="full_name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <textarea name="address" rows="3" placeholder="Address" required></textarea>
+                    <input type="text" name="city" placeholder="City" required>
+                    <input type="text" name="pincode" placeholder="Pincode" required>
+                    <button type="submit">Place Order</button>
+                </form>
+            </div>
+            
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                {% for item in cart.items.all %}
+                <div class="item">
+                    <span>{{ item.product.name }} x {{ item.quantity }}</span>
+                    <span>₹{{ item.total_price }}</span>
+                </div>
+                {% endfor %}
+                <div class="total">
+                    Total: ₹{{ cart.total_price }}
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <a href="{% url 'cart-view' %}">← Back to Cart</a>
+    </div>
+</body>
+</html>

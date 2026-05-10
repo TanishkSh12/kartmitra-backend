@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KartMitra</title>
+  <link rel="stylesheet" href="homepagecss.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">KartMitra</div>
+    <div class="search-bar"><input type="text" placeholder="Try Saree, Kurti or Search by Product Code"></div>
+    <div class="navbar-right"> 
+       <div class="profile-wrapper">
+                    <input type="checkbox" id="profile-toggle">
+                    <label for="profile-toggle" class="profile-btn">Profile</label>
+
+                    <div class="profile-dropdown">
+                        <h4>Hello User</h4>
+                        <p>To access your KartMitra account</p>
+                        <button class="signup-btn"> Sign Up</button>
+                        <div class="drop-item">🔒 My Orders</div>
+                        <div class="drop-item danger">Delete Account</div>
+                    </div>
+                </div>
+      <span><a href="cart.html">Cart</a></span>
+    </div>
+  </div>
+
+  <div class="categories">
+    <div class="dropdown">
+      <a class="dropbtn" href="#">Women</a>
+      <div class="dropdown-content">
+        <a href="#">Saree</a>
+        <a href="#">Suit</a>
+        <a href="#">Jeans</a>
+        <a href="#">Top</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a class="dropbtn" href="#">Men</a>
+      <div class="dropdown-content">
+        <a href="#">Jeans</a>
+        <a href="#">Shirt</a>
+        <a href="#">T-Shirt</a>
+        <a href="#">Lower</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a class="dropbtn" href="#">Kids</a>
+      <div class="dropdown-content">
+        <a href="#">Girl</a>
+        <a href="#">Boy</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a class="dropbtn" href="#">Home & Kitchen</a>
+      <div class="dropdown-content">
+        <a href="#">Home Decor</a>
+        <a href="#">Kitchen</a>
+        <a href="#">Furniture</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#">Beauty & Health</a>
+      <div class="dropdown-content">
+        <a href="#">Makeup</a>
+        <a href="#">Personal Care</a>
+        <a href="#">Health Care</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#">Jewellery & Accessories</a>
+      <div class="dropdown-content">
+        <a href="#">Necklace</a>
+        <a href="#">Bangles & Bracelets</a>
+        <a href="#">Hair Accessories</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#">Footwear</a>
+      <div class="dropdown-content">
+        <a href="#">Boys Shoes</a>
+        <a href="#">Girls Shoes</a>
+        <a href="#">Casual shoes</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#">Electronics</a>
+      <div class="dropdown-content">
+        <a href="#">T.V</a>
+        <a href="#">Watches</a>
+        <a href="#">Bluetooth</a>
+      </div>
+    </div>
+    <a href="#">More...</a>
+  </div>
+
+  <main>
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Welcome to Kartmitra</h1>
+        <p>Your one-stop destination for affordable shopping</p>
+        <img src="qrcode.jpg" alt="scanner" width="110px" height="110px">
+        <button>Start Shopping</button>
+      </div>
+    </div>
+
+    <section class="products">
+      <h2>Trending Near You</h2>
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-media">
+            <img class="img-main" src="floralkurti.jpg" alt="">
+            <img class="img-hover" src="floralkurti2.jpg" alt="">
+          </div>
+          <div class="product-info">
+            <h3>Anouk Women's Floral Printed Anarkali Kurta</h3>
+            <p class="price">₹1299 <span class="mrp">₹3299</span> <span class="badge">61% off</span></p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img class="img-main" src="saree.jpg" alt="">
+            <img class="img-hover" src="saree.jpg" alt="">
+          </div>
+          <div class="product-info">
+            <h3>Moda Rapido Jimmy-Choo Saree</h3>
+            <p class="price">₹499 <span class="mrp">₹999</span> <span class="badge">50% off</span></p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img class="img-main" src="Top.jpg" alt="">
+            <img class="img-hover" src="top2.jpg" alt="">
+          </div>
+          <div class="product-info">
+            <h3>The Roadster Lifestyle Co. Embroidered V-Neck Top</h3>
+            <p class="price">₹499 <span class="mrp">₹999</span> <span class="badge">50% off</span></p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img class="img-main" src="heels.jpg" alt="">
+            <img class="img-hover" src="heels2.jpg" alt="">
+          </div>
+          <div class="product-info">
+            <h3>The Roadster Lifestyle Co Women's Pointed Toe Block Heels</h3>
+            <p class="price">₹999 <span class="mrp">₹2499</span> <span class="badge">60% off</span></p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img class="img-main" src="smartwatch.jpg" alt="">
+            <img class="img-hover" src="smartwatch.jpg" alt="">
+          </div>
+          <div class="product-info">
+            <h3>Noise ColorFit Pulse 2 Max Smart Watch</h3>
+            <p class="price">₹1199 <span class="mrp">₹1199</span> <span class="badge">50% off</span></p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img class="img-main" src="womenjeans.jpg" alt="">
+            <img class="img-hover" src="womenjeans.jpg" alt="">
+          </div>
+          <div class="product-info">
+            <h3>Straight Fit High-Rise Stretchable Jeans</h3>
+            <p class="price">₹499 <span class="mrp">₹2499</span> <span class="badge">80% off</span></p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img class="img-main" src="menjeans.jpg" alt="">
+            <img class="img-hover" src="menjeans.jpg" alt="">
+          </div>
+          <div class="product-info">
+            <h3>Straight Fit Mid-Rise Stretchable Jeans</h3>
+            <p class="price">₹448 <span class="mrp">₹1999</span> <span class="badge">78% off</span></p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img class="img-main" src="shirt.jpg" alt="">
+            <img class="img-hover" src="shirt.jpg" alt="">
+          </div>
+          <div class="product-info">
+            <h3>Roadster Men's Solid Regular Fit Casual Shirt</h3>
+            <p class="price">₹494 <span class="mrp">₹2099</span> <span class="badge">76% off</span></p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img class="img-main" src="shoes.jpg" alt="">
+            <img class="img-hover" src="shoes2.jpg" alt="">
+          </div>
+          <div class="product-info">
+            <h3>Campus women girls shoes</h3>
+            <p class="price">₹970 <span class="mrp">₹1999</span> <span class="badge">51% off</span></p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img class="img-main" src="menshoe.jpg" alt="">
+            <img class="img-hover" src="menshoe.jpg" alt="">
+          </div>
+          <div class="product-info">
+            <h3>Centrino Men's Fashion Lace Up Non-Slip Flats</h3>
+            <p class="price">₹499 <span class="mrp">₹999</span> <span class="badge">50% off</span></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="brand-scroll">
+      <div class="scroll-content">
+        <div class="brand-item">
+          <img src="himalya.jpg" alt="">
+          <p>description</p>
+        </div>
+        <div class="brand-item">
+          <img src="mi.jpg" alt="">
+          <p>description</p>
+        </div>
+        <div class="brand-item">
+          <img src="bata.jpg" alt="">
+          <p>description</p>
+        </div>
+        <div class="brand-item">
+          <img src="wow.jpg" alt="">
+          <p>description</p>
+        </div>
+        <div class="brand-item">
+          <img src="mamaearth.jpg" alt="">
+          <p>description</p>
+        </div>
+        <div class="brand-item">
+          <img src="wildstone.jpg" alt="">
+          <p>description</p>
+        </div>
+        <div class="brand-item">
+          <img src="plam.jpg" alt="">
+          <p>description</p>
+        </div>
+        <div class="brand-item">
+          <img src="nivea.jpg" alt="">
+          <p>description</p>
+        </div>
+      </div>
+    </section>
+    <!-- card-section -->
+    <div class="banner">
+      <!-- LEFT SIDE OFFER -->
+      <div class="left-box">
+        <h2>Up to</h2>
+        <h1>35% OFF</h1>
+        <p>on first order<br>*Only on App</p>
+        <button>Download Now</button>
+      </div>
+
+      <!-- RIGHT SIDE CARDS -->
+      <div class="card-section">
+
+        <div class="card">
+          <img src="trending.jpg">
+          <p>Trending Now</p>
+        </div>
+
+        <div class="card">
+          <img src="budget.jpg">
+          <p>Budget Buys</p>
+        </div>
+
+        <div class="card">
+          <img src="toprate.jpg">
+          <p>Top Rated Picks</p>
+        </div>
+
+        <div class="card">
+          <img src="daily.jpg">
+          <p>Daily Essentials</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- product grid -->
+    <h1>Products For You</h1>
+    <!-- SORT BAR -->
+    <div class="sort-bar">
+      <label>Sort by :</label>
+      <select>
+        <option>Relevance</option>
+        <option>Low to High</option>
+        <option>High to Low</option>
+        <option>Rating</option>
+      </select>
+    </div>
+
+
+    <div class="main">
+      <!-- LEFT FILTER BAR -->
+      <div class="filters">
+        <h3>FILTERS</h3>
+        <p class="small">1000+ Products</p>
+        <!-- CATEGORY DROPDOWN -->
+        <label class="filter-item">
+          <input type="checkbox">
+          <div class="title">Category <span>⌄</span></div>
+          <div class="content">
+            <input type="text" placeholder="Search" class="search">
+            <label class="option"><input type="checkbox"> Women T-shirts</label>
+            <label class="option"><input type="checkbox"> Women Tops & Tunics</label>
+            <label class="option"><input type="checkbox"> Analog Watches</label>
+            <label class="option"><input type="checkbox"> Bangles & Bracelets</label>
+            <label class="option"><input type="checkbox"> Bedsheets</label>
+            <label class="option"><input type="checkbox"> Bike Covers</label>
+            <label class="option"><input type="checkbox"> Blouses</label>
+            <label class="option"><input type="checkbox"> Bluetooth Headphones</label>
+          </div>
+        </label>
+
+        <!-- GENDER -->
+        <label class="filter-item">
+          <input type="checkbox">
+          <div class="title">Gender <span>⌄</span></div>
+
+          <div class="content">
+            <label class="option"><input type="checkbox"> Men</label>
+            <label class="option"><input type="checkbox"> Women</label>
+            <label class="option"><input type="checkbox"> Kids</label>
+          </div>
+        </label>
+
+        <!-- COLOR -->
+        <label class="filter-item">
+          <input type="checkbox">
+          <div class="title">Color <span>⌄</span></div>
+
+          <div class="content">
+            <label class="option"><input type="checkbox"> Black</label>
+            <label class="option"><input type="checkbox"> Blue</label>
+            <label class="option"><input type="checkbox"> White</label>
+          </div>
+        </label>
+
+        <!-- FABRIC -->
+        <label class="filter-item">
+          <input type="checkbox">
+          <div class="title">Fabric <span>⌄</span></div>
+
+          <div class="content">
+            <label class="option"><input type="checkbox"> Cotton</label>
+            <label class="option"><input type="checkbox"> Polycotton</label>
+            <label class="option"><input type="checkbox"> Wool</label>
+          </div>
+        </label>
+
+        <!-- DIAL SHAPE -->
+        <label class="filter-item">
+          <input type="checkbox">
+          <div class="title">Dial Shape <span>⌄</span></div>
+          <div class="content">
+            <label class="option"><input type="checkbox"> Round</label>
+            <label class="option"><input type="checkbox"> Square</label>
+            <label class="option"><input type="checkbox"> Rectangle</label>
+          </div>
+        </label>
+      </div>
+
+      <!-- PRODUCT GRID -->
+      <div class="items">
+        <!-- PRODUCT 1 -->
+        <div class="item-card">
+          <a href="productinfo.html#p1">
+            <img src="lehenga.jpg">
+          </a>
+          <h4>PURVAJA Embellished Sequinned Lehenga & Unstitched Blouse with Dupatta</h4>
+          <p class="rate">₹1,999</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>7250 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 2 -->
+        <div class="item-card">
+          <a href="productinfo.html#p2">
+            <img src="kurti1.jpg">
+          </a>
+          <h4>Bellnow Women's Stylish Floral Printed Short Kurti/Top</h4>
+          <p class="rate">₹289</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>7250 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 3 -->
+        <div class="item-card">
+          <a href="productinfo.html#p3">
+            <img src="jhumka.jpg">
+          </a>
+          <h4>18K Gold-Plated Kundan Studded Beaded Dome Shaped Jhumkas</h4>
+          <p class="rate">₹890</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>7250 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 4 -->
+        <div class="item-card">
+          <!-- <a href="productinfo.html#p1"> -->
+          <img src="iphone.jpg">
+          </a>
+          <h4>Mobistyle Designed For Iphone 11 Cover With Luxury Glitter Cute....</h4>
+          <p class="rate">₹399.00 INR*</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">4.1 ★★★★ <span>20 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 5 -->
+        <div class="item-card">
+          <!-- <a href="productinfo.html#p2"> -->
+          <img src="noisebuds.jpg">
+          </a>
+          <h4>Noise Buds N1 Truly Wireless Earbuds</h4>
+          <p class="rate">₹1,299</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.8 ★ <span>832 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 6 -->
+        <div class="item-card">
+          <img src="boAt.jpg">
+          <h4>boAt Rockerz 109</h4>
+          <p class="rate">₹899</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">4.4 ★ <span>167 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 7 -->
+        <div class="item-card">
+          <img src="cartoon.jpg">
+          <h4>Buy Cartoon Character Charger Case Cover | Silicon Case By PHOBIA</h4>
+          <p class="rate">₹149</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>150 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 8 -->
+        <div class="item-card">
+          <img src="sunflower.jpg">
+          <h4>Sunflower Girl - Embroidered Mobile Cover</h4>
+          <p class="rate">₹900.00</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★★★★ <span>250 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 9 -->
+        <div class="item-card">
+          <img src="earing.jpg">
+          <h4>Nigar Kundan Indian Party Wear Pearl Chandbali Earrings</h4>
+          <p class="rate">₹550</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>89 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 10 -->
+        <div class="item-card">
+          <img src="jimmy.jpg">
+          <h4>Mp 547 Jimmy Choo Satin Saree 1</h4>
+          <p class="rate">₹1,374</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>7250 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 11 -->
+        <div class="item-card">
+          <img src="menshirt.jpg">
+          <h4>Campus Sutra Men's Pixelated-Check Relaxed Shirt</h4>
+          <p class="rate">₹665</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>7250 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 12 -->
+        <div class="item-card">
+          <img src="puma.jpg">
+          <h4>Puma CA Pro Classic Res Sneakers</h4>
+          <p class="rate">₹4,799</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>7250 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 13 -->
+        <div class="item-card">
+          <img src="baby.jpg">
+          <h4>Pink Rabbit Hooded Baby Coat</h4>
+          <p class="rate">₹1,289</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>7250 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 14 -->
+        <div class="item-card">
+          <img src="woolen.jpg">
+          <h4>BABY LOOKS Kids-Unisex Wool Blend Clothing Set</h4>
+          <p class="rate">₹599</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>7250 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 15 -->
+        <div class="item-card">
+          <img src="biba.jpg">
+          <h4>Biba Women's Solid Festive Straight Suit Set</h4>
+          <p class="rate">₹2,599.00 INR*</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.7 ★ <span>7250 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 16 -->
+        <div class="item-card">
+          <img src="vivovy2.jpg">
+          <h4>Unique Attractive Men Shoes</h4>
+          <p class="rate">₹289</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★★★★ <span>50 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 17 -->
+        <div class="item-card">
+          <img src="denimj.jpg">
+          <h4>The Lifestyle Co. Men's Baggy Fit Denim Jeans</h4>
+          <p class="rate">₹289</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>7250 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 18 -->
+        <div class="item-card">
+          <img src="Heels1.jpg">
+          <h4>GNIST Pointed Stiletto Heels</h4>
+          <p class="rate">₹1,499</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>7250 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 19 -->
+        <div class="item-card">
+          <img src="strappy.jpg">
+          <h4>JM LOOKS Women's Strappy Heels</h4>
+          <p class="rate">₹649</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>7250 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 20 -->
+        <div class="item-card">
+          <img src="onepiece.jpg">
+          <h4>Shasmi Women's Solid A-Line Ruched Puff Sleeve Maxi Long Evening One Piece Long</h4>
+          <p class="rate">₹599</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>7250 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 21 -->
+        <div class="item-card">
+          <img src="jeans.jpg">
+          <h4>Nifty Women's High-Rise Baggy Fit Jeans</h4>
+          <p class="rate">₹289</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>7250 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 22 -->
+        <div class="item-card">
+          <img src="bangle.jpg">
+          <h4>Myntra Rubans Set of 2 22K Gold Plated Kundan & CZ Studded Pearl Beaded</h4>
+          <p class="rate">₹449</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>7250 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 23 -->
+        <div class="item-card">
+          <img src="necklace.jpg">
+          <h4>Shining Diva Fashion Gold-Plated Pearls Necklace</h4>
+          <p class="rate">₹299</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>7250 Reviews</span></div>
+        </div>
+        <!-- PRODUCT 24 -->
+        <div class="item-card">
+          <img src="hairband.jpg">
+          <h4>Elegant Beige Hair Band</h4>
+          <p class="rate">₹129</p>
+          <p class="delivery">Free Delivery</p>
+          <div class="rating">3.9 ★ <span>7250 Reviews</span></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- footer -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>KartMitra</h3>
+        <p>Best online shopping platform for everyone.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <p>About Us</p>
+        <p>Contact</p>
+        <p>Terms & Conditions</p>
+      </div>
+
+      <div>
+        <h3>Follow Us</h3>
+        <p>Instagram</p>
+        <p>Facebook</p>
+        <p>Twitter</p>
+      </div>
+    </div>
+
+    <p class="copyright">© 2025 KartMitra. All rights reserved.</p>
+  </footer>
+</body>
+</html>

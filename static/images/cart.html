@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KartMitra | Cart Login</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        body {
+            margin: 0;
+            background: #fdecef
+        }
+
+        /* Top Navbar */
+        .navbar {
+            height: 60px;
+            width: 100%;
+            background-color: antiquewhite;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-bottom: 1px solid #636262;
+            z-index: 2000;
+            padding: 0 20px;
+        }
+
+        .navbar .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #7d2181;
+        }
+
+        /* SEARCH BAR */
+        .search-bar {
+            flex: 1;
+            margin: 0 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        /* NAV RIGHT */
+        .navbar-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            margin-right: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        .card {
+            background: #fff;
+            width: 380px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Banner */
+        .banner {
+            background: linear-gradient(135deg, #c21884, #ff5da2);
+            padding: 20px;
+            color: #fff;
+        }
+
+        .banner h2 {
+            margin: 0 0 8px 0;
+            font-size: 22px
+        }
+
+        .banner p {
+            margin: 0;
+            font-size: 14px
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .product {
+            background: #fff;
+            border-radius: 8px;
+            padding: 6px;
+            color: #333;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+
+        .product img {
+            width: 55px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .product span {
+            line-height: 1.2
+        }
+
+
+        /* Form */
+        .form {
+            background-color: #ff5da2;
+            padding: 25px 20px 30px;
+        }
+
+        .form h3 {
+            margin: 0 0 20px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .field {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 25px;
+        }
+
+        .country {
+            padding: 8px 6px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 10px;
+            font-size: 15px;
+        }
+
+        .btn {
+            width: 100%;
+            background: #8a005b;
+            color: #fff;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #a40070
+        }
+
+        .terms {
+            margin-top: 18px;
+            font-size: 12px;
+            color: #777;
+            text-align: center;
+        }
+
+        .terms span {
+            color: #8a005b
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">KartMitra</div>
+        <div class="search-bar"><input type="text" placeholder="Try Saree, Kurti or Search by Product Code"></div>
+        <div class="navbar-right"> <span><a href="#">Profile</a></span>
+            <span><a href="cart.html">Cart</a></span>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="card">
+            <div class="banner">
+                <div class="products">
+                    <div class="product">
+                        <img src="saree.jpg" alt="Saree">
+                        <span>Sarees<br>₹250</span>
+                    </div>
+                    <div class="product">
+                        <img src="kurti.jpg" alt="Kurti">
+                        <span>Kurtis<br>₹200</span>
+                    </div>
+                    <div class="product">
+                        <img src="jeans.jpg" alt="Jeans">
+                        <span>Jeans<br>₹300</span>
+                    </div>
+                    <div class="product">
+                        <img src="shirt.jpg" alt="Shirt">
+                        <span>Shirts<br>₹350</span>
+                    </div>
+                    <h2>Great Quality</h2>
+                    <p>Lowest prices</p>
+                </div>
+
+                <div class="form">
+                    <h3>Sign Up to view your cart items</h3>
+                    <div class="field">
+                        <div class="country">IN +91</div>
+                        <input type="text" placeholder="Phone Number">
+                    </div>
+                    <button class="btn">Continue</button>
+                    <div class="terms">
+                        By continuing, you agree to KartMitra's <span>Terms & Conditions</span> and <span>Privacy
+                            Policy</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+</body>
+
+</html>
