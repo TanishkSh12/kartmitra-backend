@@ -18,6 +18,8 @@ KartMitra is a Django-based e-commerce backend project.
 - Products
 - Cart
 - Orders
+## Author
+Tanishka Sharma
 ## Run Project
 ```bash
 pip install -r requirements.txt
