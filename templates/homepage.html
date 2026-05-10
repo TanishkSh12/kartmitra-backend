@@ -1,0 +1,341 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KartMitra</title>
+  <link rel="stylesheet" href="{% static 'css/homepagecss.css' %}">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">KartMitra</div>
+    <div class="search-bar">
+      <form action="{% url 'search-products' %}" method="GET" style="display: flex; width: 100%;">
+        <input type="text" name="q" placeholder="Try Saree, Kurti or Search by Product Code" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+      </form>
+    </div>
+    <div class="navbar-right"> 
+       <div class="profile-wrapper">
+          {% if user.is_authenticated %}
+            <input type="checkbox" id="profile-toggle">
+            <label for="profile-toggle" class="profile-btn">Hello, {{ user.username }}</label>
+            <div class="profile-dropdown">
+                <h4>Welcome {{ user.username }}!</h4>
+                <p>{{ user.email }}</p>
+                <a href="{% url 'profile' %}" class="signup-btn" style="text-align: center; display: block;">👤 My Profile</a>
+                <a href="{% url 'order-list' %}" class="drop-item">📦 My Orders</a>
+                <a href="{% url 'logout' %}" class="drop-item danger">🚪 Logout</a>
+            </div>
+          {% else %}
+            <input type="checkbox" id="profile-toggle">
+            <label for="profile-toggle" class="profile-btn">Profile</label>
+            <div class="profile-dropdown">
+                <h4>Hello User</h4>
+                <p>Login to access your KartMitra account</p>
+                <a href="{% url 'login' %}" class="signup-btn" style="text-align: center; display: block;">Login</a>
+                <a href="{% url 'signup' %}" class="drop-item">📝 Sign Up</a>
+            </div>
+          {% endif %}
+        </div>
+      <span><a href="{% url 'cart-view' %}">🛒 Cart</a></span>
+    </div>
+  </div>
+  <div class="categories">
+    <div class="dropdown">
+      <a class="dropbtn" href="#">Women</a>
+      <div class="dropdown-content">
+        <a href="/products/category/women/">All Women</a>
+        <a href="/products/category/women-t-shirts/">T-shirts</a>
+        <a href="/products/category/women-tops-tunics/">Tops & Tunics</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="dropbtn" href="#">Men</a>
+      <div class="dropdown-content">
+        <a href="/products/category/men/">All Men</a>
+        <a href="/products/category/men-jeans/">Jeans</a>
+        <a href="/products/category/men-shirts/">Shirts</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="dropbtn" href="#">Footwear</a>
+      <div class="dropdown-content">
+        <a href="/products/category/footwear/">All Footwear</a>
+        <a href="/products/category/mens-shoes/">Men Shoes</a>
+        <a href="/products/category/women-shoes/">Women Shoes</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="dropbtn" href="#">Kids</a>
+      <div class="dropdown-content">
+        <a href="/products/category/kids/">All Kids</a>
+        <a href="/products/category/kids-girls/">Girls</a>
+        <a href="/products/category/kids-boys/">Boys</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="dropbtn" href="#">Home & Kitchen</a>
+      <div class="dropdown-content">
+        <a href="/products/category/home-kitchen/">All Home & Kitchen</a>
+        <a href="/products/category/home-decor/">Home Decor</a>
+        <a href="/products/category/kitchen/">Kitchen</a>
+        <a href="/products/category/furniture/">Furniture</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="dropbtn" href="#">Beauty & Health</a>
+      <div class="dropdown-content">
+        <a href="/products/category/beauty-health/">All Beauty & Health</a>
+        <a href="/products/category/makeup/">Makeup</a>
+        <a href="/products/category/personal-care/">Personal Care</a>
+        <a href="/products/category/health-care/">Health Care</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="dropbtn" href="#">Jewellery & Accessories</a>
+      <div class="dropdown-content">
+        <a href="/products/category/jewellery/">All Jewellery</a>
+        <a href="/products/category/necklace/">Necklace</a>
+        <a href="/products/category/bangles/">Bangles & Bracelets</a>
+        <a href="/products/category/hair-accessories/">Hair Accessories</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="dropbtn" href="#">Electronics</a>
+      <div class="dropdown-content">
+        <a href="/products/category/electronics/">All Electronics</a>
+        <a href="/products/category/tv/">T.V</a>
+        <a href="/products/category/watches/">Watches</a>
+        <a href="/products/category/bluetooth/">Bluetooth</a>
+      </div>
+    </div>   
+    <a href="{% url 'product-list' %}" class="view-all-categories">View All →</a>
+  </div>
+  <main>
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Welcome to Kartmitra</h1>
+        <p>Your one-stop destination for affordable shopping</p>
+        <img src="{% static 'images/qrcode.jpg' %}" alt="scanner" width="110px" height="110px">
+        <button onclick="document.getElementById('products-section').scrollIntoView({behavior: 'smooth'})">Start Shopping</button>
+      </div>
+    </div>
+    <section class="products">
+      <h2>Trending Near You</h2>
+      <div class="product-grid">
+        <article class="product-card" onclick="location.href='{% url 'product-detail' 1 %}'" style="cursor: pointer;">
+          <div class="product-media">
+            <img class="img-main" src="{% static 'images/floralkurti.jpg' %}" alt="">
+            <img class="img-hover" src="{% static 'images/floralkurti2.jpg' %}" alt="">
+          </div>
+          <div class="product-info">
+            <h3>Anouk Women's Floral Printed Anarkali Kurta</h3>
+            <p class="price">₹1299 <span class="mrp">₹3299</span> <span class="badge">61% off</span></p>
+          </div>
+        </article>
+        <article class="product-card" onclick="location.href='{% url 'product-detail' 2 %}'" style="cursor: pointer;">
+          <div class="product-media">
+            <img class="img-main" src="{% static 'images/saree.jpg' %}" alt="">
+            <img class="img-hover" src="{% static 'images/saree.jpg' %}" alt="">
+          </div>
+          <div class="product-info">
+            <h3>Moda Rapido Jimmy-Choo Saree</h3>
+            <p class="price">₹499 <span class="mrp">₹999</span> <span class="badge">50% off</span></p>
+          </div>
+        </article>
+        <article class="product-card" onclick="location.href='{% url 'product-detail' 3 %}'" style="cursor: pointer;">
+          <div class="product-media">
+            <img class="img-main" src="{% static 'images/Top.jpg' %}" alt="">
+            <img class="img-hover" src="{% static 'images/top2.jpg' %}" alt="">
+          </div>
+          <div class="product-info">
+            <h3>The Roadster Lifestyle Co. Embroidered V-Neck Top</h3>
+            <p class="price">₹499 <span class="mrp">₹999</span> <span class="badge">50% off</span></p>
+          </div>
+        </article>
+        <article class="product-card" onclick="location.href='{% url 'product-detail' 4 %}'" style="cursor: pointer;">
+          <div class="product-media">
+            <img class="img-main" src="{% static 'images/heels.jpg' %}" alt="">
+            <img class="img-hover" src="{% static 'images/heels2.jpg' %}" alt="">
+          </div>
+          <div class="product-info">
+            <h3>The Roadster Lifestyle Co Women's Pointed Toe Block Heels</h3>
+            <p class="price">₹999 <span class="mrp">₹2499</span> <span class="badge">60% off</span></p>
+          </div>
+        </article>
+        <article class="product-card" onclick="location.href='{% url 'product-detail' 5 %}'" style="cursor: pointer;">
+          <div class="product-media">
+            <img class="img-main" src="{% static 'images/smartwatch.jpg' %}" alt="">
+            <img class="img-hover" src="{% static 'images/smartwatch.jpg' %}" alt="">
+          </div>
+          <div class="product-info">
+            <h3>Noise ColorFit Pulse 2 Max Smart Watch</h3>
+            <p class="price">₹1199 <span class="mrp">₹1199</span> <span class="badge">50% off</span></p>
+          </div>
+        </article>
+        <article class="product-card" onclick="location.href='{% url 'product-detail' 6 %}'" style="cursor: pointer;">
+          <div class="product-media">
+            <img class="img-main" src="{% static 'images/womenjeans.jpg' %}" alt="">
+            <img class="img-hover" src="{% static 'images/womenjeans.jpg' %}" alt="">
+          </div>
+          <div class="product-info">
+            <h3>Straight Fit High-Rise Stretchable Jeans</h3>
+            <p class="price">₹499 <span class="mrp">₹2499</span> <span class="badge">80% off</span></p>
+          </div>
+        </article>
+        <article class="product-card" onclick="location.href='{% url 'product-detail' 7 %}'" style="cursor: pointer;">
+          <div class="product-media">
+            <img class="img-main" src="{% static 'images/menjeans.jpg' %}" alt="">
+            <img class="img-hover" src="{% static 'images/menjeans.jpg' %}" alt="">
+          </div>
+          <div class="product-info">
+            <h3>Straight Fit Mid-Rise Stretchable Jeans</h3>
+            <p class="price">₹448 <span class="mrp">₹1999</span> <span class="badge">78% off</span></p>
+          </div>
+        </article>
+        <article class="product-card" onclick="location.href='{% url 'product-detail' 8 %}'" style="cursor: pointer;">
+          <div class="product-media">
+            <img class="img-main" src="{% static 'images/shirt.jpg' %}" alt="">
+            <img class="img-hover" src="{% static 'images/shirt.jpg' %}" alt="">
+          </div>
+          <div class="product-info">
+            <h3>Roadster Men's Solid Regular Fit Casual Shirt</h3>
+            <p class="price">₹494 <span class="mrp">₹2099</span> <span class="badge">76% off</span></p>
+          </div>
+        </article>
+        <article class="product-card" onclick="location.href='{% url 'product-detail' 9 %}'" style="cursor: pointer;">
+          <div class="product-media">
+            <img class="img-main" src="{% static 'images/shoes.jpg' %}" alt="">
+            <img class="img-hover" src="{% static 'images/shoes2.jpg' %}" alt="">
+          </div>
+          <div class="product-info">
+            <h3>Campus women girls shoes</h3>
+            <p class="price">₹970 <span class="mrp">₹1999</span> <span class="badge">51% off</span></p>
+          </div>
+        </article>
+        <article class="product-card" onclick="location.href='{% url 'product-detail' 10 %}'" style="cursor: pointer;">
+          <div class="product-media">
+            <img class="img-main" src="{% static 'images/menshoe.jpg' %}" alt="">
+            <img class="img-hover" src="{% static 'images/menshoe.jpg' %}" alt="">
+          </div>
+          <div class="product-info">
+            <h3>Centrino Men's Fashion Lace Up Non-Slip Flats</h3>
+            <p class="price">₹499 <span class="mrp">₹999</span> <span class="badge">50% off</span></p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="brand-scroll">
+      <div class="scroll-content">
+        <div class="brand-item">
+          <img src="{% static 'images/himalya.jpg' %}" alt="">
+          <p>description</p>
+        </div>
+        <div class="brand-item">
+          <img src="{% static 'images/mi.jpg' %}" alt="">
+          <p>description</p>
+        </div>
+        <div class="brand-item">
+          <img src="{% static 'images/bata.jpg' %}" alt="">
+          <p>description</p>
+        </div>
+        <div class="brand-item">
+          <img src="{% static 'images/wow.jpg' %}" alt="">
+          <p>description</p>
+        </div>
+        <div class="brand-item">
+          <img src="{% static 'images/mamaearth.jpg' %}" alt="">
+          <p>description</p>
+        </div>
+        <div class="brand-item">
+          <img src="{% static 'images/wildstone.jpg' %}" alt="">
+          <p>description</p>
+        </div>
+        <div class="brand-item">
+          <img src="{% static 'images/plam.jpg' %}" alt="">
+          <p>description</p>
+        </div>
+        <div class="brand-item">
+          <img src="{% static 'images/nivea.jpg' %}" alt="">
+          <p>description</p>
+        </div>
+      </div>
+    </section>
+    <div class="banner">
+      <div class="left-box">
+        <h2>Up to</h2>
+        <h1>35% OFF</h1>
+        <p>on first order<br>*Only on App</p>
+        <button>Download Now</button>
+      </div>
+      <div class="card-section">
+        <div class="card">
+          <img src="{% static 'images/trending.jpg' %}">
+          <p>Trending Now</p>
+        </div>
+        <div class="card">
+          <img src="{% static 'images/budget.jpg' %}">
+          <p>Budget Buys</p>
+        </div>
+        <div class="card">
+          <img src="{% static 'images/toprate.jpg' %}">
+          <p>Top Rated Picks</p>
+        </div>
+        <div class="card">
+          <img src="{% static 'images/daily.jpg' %}">
+          <p>Daily Essentials</p>
+        </div>
+      </div>
+    </div>
+    <section class="products-section" id="products-section">
+      <h2>Products For You</h2>
+      <div class="product-grid">
+        {% for product in products|slice:":8" %}
+        <div class="product-card" onclick="location.href='{% url 'product-detail' product.id %}'" style="cursor: pointer;">
+          <div class="product-media">
+            {% if product.image %}
+              <img class="img-main" src="{{ product.image.url }}" alt="{{ product.name }}">
+            {% else %}
+              <img class="img-main" src="https://via.placeholder.com/300x300?text=No+Image" alt="{{ product.name }}">
+            {% endif %}
+          </div>
+          <div class="product-info">
+            <h3>{{ product.name|truncatechars:50 }}</h3>
+            <p class="price">₹{{ product.final_price }}</p>
+            {% if product.discount_price %}
+              <span class="mrp">₹{{ product.price }}</span>
+              <span class="badge">{{ product.discount_percentage }}% off</span>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="{% url 'product-list' %}" class="view-all-btn">View All Products →</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>KartMitra</h3>
+        <p>Best online shopping platform for everyone.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p>About Us</p>
+        <p>Contact</p>
+        <p>Terms & Conditions</p>
+      </div>
+      <div>
+        <h3>Follow Us</h3>
+        <p>Instagram</p>
+        <p>Facebook</p>
+        <p>Twitter</p>
+      </div>
+    </div>
+    <p class="copyright">© 2025 KartMitra. All rights reserved.</p>
+  </footer>
+</body>
+</html>
